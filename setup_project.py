@@ -1,4 +1,3 @@
-import pandas
 import polars
 import narwhals
 import pathlib
@@ -17,12 +16,12 @@ def download_data() -> None:
         path_value = pathlib.Path(file)
         data = polars.read_csv(file, ignore_errors=True)
         print(data.describe())
-        data.write_csv("data/"+path_value.name)
+        data.write_csv("data/raw/csv/"+path_value.name)
 
 def download_docs() -> None:
     docs_paths = [
-        "https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-02-04/readme.md",
-        "https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-02-04/meta.yaml"
+        "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-02-04/readme.md",
+        "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-02-04/meta.yaml"
     ]
 
     for file in docs_paths:
