@@ -1,8 +1,12 @@
 ## PyData Hacknight
 
-## What is this?
+### What is this?
 
 PyData Cardiff organised a hacknight at Hodge House, Cardiff on the 13th of November 2025. This is the code to help set you up and hopefully show off some of the things that were built on the night. The data here is taken from [Tidy Tuesdays 2025-02-04 on the Simpsons](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-02-04/simpsons_episodes.csv).
+
+#### Disclaimer
+
+Because this is scraped data that is nearly a decade old (see the references in the Tidy Tuesday repo and in kaggle), many (all?) of the URLS seem dead/broken.
 
 ### How do I get started?
 
@@ -26,14 +30,26 @@ PyData Cardiff organised a hacknight at Hodge House, Cardiff on the 13th of Nove
 ### Topic Specific Ideas
 
 * Does the Simpsons pass the [Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test)
-* Visualise which member of the Simposons family is the most important by creating a ['network of characters'](https://web.madstudio.northwestern.edu/re-visualizing-the-novel/) diagram.
+* Analyse which member of the Simposons family is the most important by creating a ['network of characters'](https://web.madstudio.northwestern.edu/re-visualizing-the-novel/) diagram.
+* Visualise each characters lines as a word cloud
 
 ### Tool Specific Ideas
 
 * Create an [interactive dashboard](https://plotly.com/python/) slice and dice the data
 * Graph data in a [backend agnostic](https://narwhals-dev.github.io/narwhals/why/) way
+    * `daveparr/joinar` joins the datasets in this project in a backend agnostic way. 
+        * If you're keen to collab on this (tests, new features, even just docs!) come grab me :)
 * Create an [backend server to return specific data](https://fastapi.tiangolo.com/)
 * Create a [cli to return specific data](https://typer.tiangolo.com/)
+
+### Data Specific Ideas
+
+> Use scraping tools responsibly, and where present respect [robots.txt](https://en.wikipedia.org/wiki/Robots.txt) and comply with [Really Simple Licensing](https://rslstandard.org/)
+
+* Can the urls in the data set be updated/ replaced?
+* Can the data set be updated with current episodes?
+* Can the data set be extended with other data sources? 
+    * [Simpsons Wiki](https://simpsons.fandom.com/wiki/Simpsons_Wiki) for instance...
 
 ### Machine Learning Specific Ideas
 
