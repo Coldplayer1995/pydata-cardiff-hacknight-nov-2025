@@ -1,6 +1,7 @@
 import pathlib
 import urllib.request
 import pydytuesday
+from daveparr import joinar
 
 def download_docs() -> None:
     docs_paths = [
