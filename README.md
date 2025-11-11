@@ -41,6 +41,7 @@ Because this is scraped data that is nearly a decade old (see the references in 
         * If you're keen to collab on this (tests, new features, even just docs!) come grab me :)
 * Create an [backend server to return specific data](https://fastapi.tiangolo.com/)
 * Create a [cli to return specific data](https://typer.tiangolo.com/)
+* Create data schemas for [data validation](https://pandera.readthedocs.io/en/stable/index.html#)
 
 ### Data Specific Ideas
 

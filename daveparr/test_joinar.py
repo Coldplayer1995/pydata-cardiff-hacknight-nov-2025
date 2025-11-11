@@ -12,6 +12,7 @@ def test_coerce_id_to_int():
 
 
 # IDEA(DRGP): Can these tests be fixturised with params for better ergonomics?
+# IDEA(DRGP): These tests should be extended to 'prove' behavior with pandas et al.
 # IDEA(DRGP): Can these tests be extended to check that not all results on the joined data are null?
 def test_join_script_by_character():
     script_data = pl.read_csv("data/raw/simpsons_script_lines.csv")
