@@ -8,7 +8,8 @@ def coerce_id_to_int(df: FrameT, col: str) -> FrameT:
 
 @nw.narwhalify
 def join_script_by_character(script_lines: FrameT, characters:FrameT) -> FrameT:
-    return coerce_id_to_int(script_lines, "character_id").join(characters, left_on = "character_id", right_on = "id")
+    coerced_df = coerce_id_to_int(script_lines, "character_id")
+    return coerced_df.join(nw.to_native(characters), left_on = "character_id", right_on = "id")
 
 
 
