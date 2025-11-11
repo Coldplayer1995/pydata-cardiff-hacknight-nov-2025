@@ -26,28 +26,36 @@ PyData Cardiff organised a hacknight at Hodge House, Cardiff on the 13th of Nove
 ### Topic Specific Ideas
 
 * Does the Simpsons pass the [Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test)
+* Visualise which member of the Simposons family is the most important by creating a ['network of characters'](https://web.madstudio.northwestern.edu/re-visualizing-the-novel/) diagram.
 
 ### Tool Specific Ideas
 
-* Plot 
+* Create an [interactive dashboard](https://plotly.com/python/) slice and dice the data
+* Graph data in a [backend agnostic](https://narwhals-dev.github.io/narwhals/why/) way
+* Create an [backend server to return specific data](https://fastapi.tiangolo.com/)
+* Create a [cli to return specific data](https://typer.tiangolo.com/)
 
 ### Machine Learning Specific Ideas
 
 * Predict the rating of a given episode based on the presence of specific characters
-
+* Classify episodes into specific ['topics'](https://www.datacamp.com/tutorial/what-is-topic-modeling)
 
 ### AI Specific Ideas
 
-* A summary of the key plot points of each episode
+* A summary index of the key plot points of each episode
 * AI images of specific scenes by prompting using the script data
-* A couch gag generator that outlines a ne couch gag based on each episode
-* A 
+* A couch gag generator that outlines a new couch gag based on the themes each episode
 
 ### Alternative Data Science Language Hipster Challenge
 
 * Pick a simple problem you can confidently do in Python such as a simple plot of variables or a linear regression model, then try to re-create an equivalent in another 'data science' language, such as `R`, `Julia` or `Mojo`. A few languages that [might not seem like data science languages](https://github.com/pola-rs/nodejs-polars) also [might surprise you](https://rust-ml.github.io/book/5_linear_regression.html).
 
 > @DaveParr does not take any responsibility for the quality of the ideas listed above. For any given idea it may be too hard, too easy, or just plain stupid.
+
+Other folks have worked with this data before:
+
+[kaggle](https://www.kaggle.com/datasets/prashant111/the-simpsons-dataset/code)
+
 
 ### What if I have questions?
 

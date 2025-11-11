@@ -8,6 +8,7 @@ dependencies = [
     "narwhals>=2.11.0",
     "pandas>=2.3.3",
     "polars>=1.35.2",
+    "pydytuesday>=0.1.2",
 ]
 
 [project.scripts]
