@@ -1,0 +1,64 @@
+## PyData Hacknight
+
+## What is this?
+
+PyData Cardiff organised a hacknight at Hodge House, Cardiff on the 13th of November 2025. This is the code to help set you up and hopefully show off some of the things that were built on the night. The data here is taken from [Tidy Tuesdays 2025-02-04 on the Simpsons](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-02-04/simpsons_episodes.csv).
+
+### How do I get started?
+
+(step 0 is to make sure you have a github account and install[git](https://github.com/git-guides) on your machine)
+
+1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository
+1. [Clone](https://github.com/git-guides/git-clone#git-clone) your forked repository to your local machine
+1. Avoid modifying the `tidy_tuesdays_original` folder directly.
+1. Make a folder with your github user name in the pydata_cardiff folder
+    * You could even pair up with someone else and make a folder with both your user names
+1. Write some code in the folder you created
+    * The `pyproject.toml` can help bootstrap a [poetry](https://python-poetry.org/docs/) or [uv](https://docs.astral.sh/uv/) environment. Both of these can be installed with [pipx](https://pipx.pypa.io/stable/)
+1. [Add](https://github.com/git-guides/git-add) your code the folder
+
+### What do I make?
+
+1. Anything you want! If you think you might be able to do it, have a go. Think about what you want to learn, and try to do that. Or maybe think about what you believe to be true about the Simpsons and see if you can prove it from the data.
+
+(But if you are stuck for ideas heres a few)
+
+### Topic Specific Ideas
+
+* Does the Simpsons pass the [Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test)
+
+### Tool Specific Ideas
+
+* Plot 
+
+### Machine Learning Specific Ideas
+
+* Predict the rating of a given episode based on the presence of specific characters
+
+
+### AI Specific Ideas
+
+* A summary of the key plot points of each episode
+* AI images of specific scenes by prompting using the script data
+* A couch gag generator that outlines a ne couch gag based on each episode
+* A 
+
+### Alternative Data Science Language Hipster Challenge
+
+* Pick a simple problem you can confidently do in Python such as a simple plot of variables or a linear regression model, then try to re-create an equivalent in another 'data science' language, such as `R`, `Julia` or `Mojo`. A few languages that [might not seem like data science languages](https://github.com/pola-rs/nodejs-polars) also [might surprise you](https://rust-ml.github.io/book/5_linear_regression.html).
+
+> @DaveParr does not take any responsibility for the quality of the ideas listed above. For any given idea it may be too hard, too easy, or just plain stupid.
+
+### What if I have questions?
+
+1. Ask someone near you, they're probably really nice.
+1. Google it, reading the docs isn't cheating!
+1. Ask one of the organisers.
+
+### What do I do when I am done?
+
+1. [Commit](https://github.com/git-guides/git-commit#git-commit) your changes to your local repository.
+1. [Push](https://github.com/git-guides/git-push) your changes to your forked repository.
+1. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) to merge your changes into this repository.
+1. Tag @DaveParr for review
+1. Use your new knowledge to forage for donuts and Duff Beer
