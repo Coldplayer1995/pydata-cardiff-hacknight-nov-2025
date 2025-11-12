@@ -39,6 +39,10 @@ Because this is scraped data that is nearly a decade old (see the references in 
 * Graph data in a [backend agnostic](https://narwhals-dev.github.io/narwhals/why/) way
     * `daveparr/joinar` joins the datasets in this project in a backend agnostic way. 
         * If you're keen to collab on this (tests, new features, even just docs!) come grab me :)
+* Load data into [Neo4j](https://neo4j.com/) for graph visualization
+    * `load_neo4j.py` loads the Simpsons data into Neo4j with character, episode, and location relationships
+    * Use `docker-compose up -d` to start Neo4j (see [DOCKER.md](DOCKER.md) for details)
+    * Visualize character networks, episode relationships, and location patterns in Neo4j Browser
 * Create an [backend server to return specific data](https://fastapi.tiangolo.com/)
 * Create a [cli to return specific data](https://typer.tiangolo.com/)
 * Create data schemas for [data validation](https://pandera.readthedocs.io/en/stable/index.html#)
@@ -87,3 +91,53 @@ Other folks have worked with this data before:
 1. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) to merge your changes into this repository.
 1. Tag @DaveParr for review
 1. Use your new knowledge to forage for donuts and Duff Beer
+
+┌─────────────────────────┐
+│   CHARACTERS            │
+│─────────────────────────│
+│ id (PK)                 │
+│ name                    │
+│ normalized_name         │
+│ gender                  │
+└─────────────────────────┘
+         ▲
+         │
+         │ character_id (FK)
+         │
+┌─────────────────────────┐
+│   SCRIPT_LINES          │◄─── CENTRAL HUB TABLE
+│─────────────────────────│
+│ id (PK)                 │
+│ episode_id (FK) ────────┼──┐
+│ character_id (FK)      │  │
+│ location_id (FK) ───────┼──┼──┐
+│ number                  │  │  │
+│ raw_text                │  │  │
+│ timestamp_in_ms         │  │  │
+│ speaking_line (bool)    │  │  │
+│ spoken_words            │  │  │
+│ word_count              │  │  │
+└─────────────────────────┘  │  │
+         │                   │  │
+         │ episode_id (FK)    │  │
+         │                     │  │
+┌─────────────────────────┐  │  │
+│   EPISODES               │◄─┘  │
+│─────────────────────────│     │
+│ id (PK)                 │     │
+│ title                   │     │
+│ season                  │     │
+│ imdb_rating             │     │
+│ original_air_date       │     │
+│ us_viewers_in_millions  │     │
+└─────────────────────────┘     │
+                                │
+                                │ location_id (FK)
+                                │
+┌─────────────────────────┐     │
+│   LOCATIONS             │◄────┘
+│─────────────────────────│
+│ id (PK)                 │
+│ name                    │
+│ normalized_name         │
+└─────────────────────────┘
